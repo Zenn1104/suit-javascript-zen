@@ -21,11 +21,12 @@ function convertChoice(computer) {
 function scoreSum(hasil) {
     const scorePlayer = 0;    
     if( hasil == 'MENANG') {
-        scorePlayer += 1
+        scorePlayer++;
     };
+    return scorePlayer;
 }
 
-const choice = document.querySelectorAll('ul li');
+const choice = document.querySelectorAll('div');
 choice.forEach(function(pil) {
     pil.addEventListener('click', function() {
         const pComputer = getComputerChoice();

@@ -1,83 +1,89 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin : 0;
+    padding : 0;
     box-sizing: border-box;
     font-family: monospace;
+    background-color: cadetblue;
 }
 
-.body {
-    display: flex;
-    justify-content: center;
-}
-
-
-.root {
+h1 {
+    margin: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50vh;
-    height:50vh;
-    border: 3px solid;
-    gap: 5px;
+    font-size: 3em;
 }
 
 .main {
+    height: 50vh;
     display: flex;
+    justify-content: center;
     align-items: center;
-    width: 50vh;
-    height: auto;
     flex-direction: column;
-    border: 3px solid #ddd;
+    border: 5px solid;
+}
+
+.computer-area {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vh;
+    height: 20vh;
+    border: 3px solid;
+    margin: 15px;
 }
 
 .info-area {
     display: flex;
-    align-items: center;
-    border: 2px solid;
-    padding: 20px;
-    margin: 20px;
-    height: 40px;
-}
-
-
-.computer-btn {
-    display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
-    border: 2px solid;
+    font-size: 1.5em;
+    height: 10vh;
+    width: 50vh;
+    border: 3px solid;
 }
 
 .player-area {
+    margin: 15px;
     display: flex;
-    justify-content: space-around;
-    border : 2px solid;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    height: 15vh;
+    width: 30vh;
+    border: 3px solid;
+    gap: 10px
 }
 
 .batu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border: 2px solid;
+    text-decoration: none;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #ddd;
 }
 
 .gunting {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border: 2px solid;
+    text-decoration: none;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #ddd;
 }
 
 .kertas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border: 2px solid;
+    text-decoration: none;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #ddd;
+}
+
+.computer-btn {
+    text-decoration: none;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #ddd;
 }
