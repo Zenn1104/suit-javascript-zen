@@ -12,72 +12,39 @@ function getRules(computer, player) {
     if( player == 'kertas') return ( computer == 'gunting') ? 'KALAH!' : 'MENANG!';
 }
 
+function convertChoice(computer) {
+    if(computer == 'batu') return '👊';
+    if(computer == 'gunting') return '✌';
+    if(computer == 'kertas') return '✋';
+};
 
-// const pBatu = document.querySelector('.batu');
-// pBatu.addEventListener('click', function() {
-//     const pComputer = getComputerChoice();
-//     const pPlayer = pBatu.className;
-//     const hasil = getRules(pComputer, pPlayer);
-
-//     const computerVisual = document.querySelector('.computer-btn');
-//     computerVisual.textContent = pComputer;
-
-//     const info = document.querySelector('.info-area');
-//     info.innerHTML = hasil;
-
-//     console.log(`pilihan computer : ${pComputer}`);
-//     console.log(`pilihan player: ${pPlayer}`);
-//     console.log(`hasil: ${hasil}`);
-// });
-
+function scoreSum(hasil) {
+    const scorePlayer = 0;    
+    if( hasil == 'MENANG') {
+        scorePlayer += 1
+    };
+}
 
 const choice = document.querySelectorAll('ul li');
 choice.forEach(function(pil) {
     pil.addEventListener('click', function() {
         const pComputer = getComputerChoice();
+        const finalChoiceComputer = convertChoice(pComputer);
         const pPlayer = pil.className;
         const hasil = getRules(pComputer, pPlayer);
-        
+        const score = scoreSum(hasil)
+
         const computerVisual = document.querySelector('.computer-btn');
-        computerVisual.textContent = pComputer;
+        computerVisual.textContent = finalChoiceComputer;
+        // const scoreVisual = document.querySelector('.score-area');
+        // scoreVisual.innerHTML = score;
         
         const info = document.querySelector('.info-area');
         info.innerHTML = hasil;
 
-        
+        console.log(`score : ${score}`);
         console.log(`pilihan computer : ${pComputer}`);
         console.log(`pilihan player: ${pPlayer}`);
         console.log(`hasil: ${hasil}`);
     })
 })
-
-
-// const pGunting = document.querySelector('.gunting');
-// pGunting.addEventListener('click', function() {
-//     const pComputer = getComputerChoice();
-//     const pPlayer = pGunting.className;
-//     const hasil = getRules(pComputer, pPlayer);
-
-//     const computerVisual = document.querySelector('.computer-btn');
-//     computerVisual.textContent = pComputer;
-
-//     const info = document.querySelector('.info-area');
-//     info.innerHTML = hasil;
-// });
-
-// const pKertas = document.querySelector('.kertas');
-// pKertas.addEventListener('click', function() {
-//     const pComputer = getComputerChoice();
-//     const pPlayer = pKertas.className;
-//     const hasil = getRules(pComputer, pPlayer);
-
-//     const computerVisual = document.querySelector('.computer-btn');
-//     computerVisual.textContent = pComputer;
-
-//     const info = document.querySelector('.info-area');
-//     info.innerHTML = hasil;
-
-//     console.log(`pilihan computer : ${pComputer}`);
-//     console.log(`pilihan player: ${pPlayer}`);
-//     console.log(`hasil: ${hasil}`);
-// })

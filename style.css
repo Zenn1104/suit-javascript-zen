@@ -1,27 +1,44 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
 }
 
-.main {
+.body {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-section {
+
+.root {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50vh;
     height:50vh;
-    border: 5px solid;
+    border: 3px solid;
     gap: 5px;
 }
 
-info-area {
-    height: 30px;
+.main {
+    display: flex;
+    align-items: center;
+    width: 50vh;
+    height: auto;
+    flex-direction: column;
+    border: 3px solid #ddd;
 }
+
+.info-area {
+    display: flex;
+    align-items: center;
+    border: 2px solid;
+    padding: 20px;
+    margin: 20px;
+    height: 40px;
+}
+
 
 .computer-btn {
     display: flex;
@@ -29,7 +46,13 @@ info-area {
     align-items: center;
     width: 50px;
     height: 50px;
-    border: 5px solid;
+    border: 2px solid;
+}
+
+.player-area {
+    display: flex;
+    justify-content: space-around;
+    border : 2px solid;
 }
 
 .batu {
@@ -38,7 +61,7 @@ info-area {
     align-items: center;
     width: 50px;
     height: 50px;
-    border: 5px solid;
+    border: 2px solid;
 }
 
 .gunting {
@@ -47,7 +70,7 @@ info-area {
     align-items: center;
     width: 50px;
     height: 50px;
-    border: 5px solid;
+    border: 2px solid;
 }
 
 .kertas {
@@ -56,5 +79,5 @@ info-area {
     align-items: center;
     width: 50px;
     height: 50px;
-    border: 5px solid;
+    border: 2px solid;
 }
