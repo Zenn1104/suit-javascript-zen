@@ -57,6 +57,7 @@ h1 {
 }
 
 .batu {
+    cursor: pointer;
     text-decoration: none;
     text-align: center;
     width: 40px;
@@ -65,6 +66,7 @@ h1 {
 }
 
 .gunting {
+    cursor: pointer;
     text-decoration: none;
     text-align: center;
     width: 40px;
@@ -73,6 +75,7 @@ h1 {
 }
 
 .kertas {
+    cursor: pointer;
     text-decoration: none;
     text-align: center;
     width: 40px;
@@ -81,6 +84,7 @@ h1 {
 }
 
 .computer-btn {
+    cursor: pointer;
     text-decoration: none;
     text-align: center;
     width: 40px;

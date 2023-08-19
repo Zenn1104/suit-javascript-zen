@@ -18,13 +18,6 @@ function convertChoice(computer) {
     if(computer == 'kertas') return '✋';
 };
 
-// function scoreSum(hasil) {
-//     const scorePlayer = 0;    
-//     if( hasil == 'MENANG') {
-//         scorePlayer++;
-//     };
-//     return scorePlayer;
-// }
 
 const choice = document.querySelectorAll('div');
 choice.forEach(function(pil) {
@@ -35,24 +28,26 @@ choice.forEach(function(pil) {
         const hasil = getRules(pComputer, pPlayer);
         const pScore = document.querySelector('.player-score');
         const cScore = document.querySelector('.computer-score');
-        let scorePlayer = 0;
-        let scoreComputer = 0;
 
         const computerVisual = document.querySelector('.computer-btn');
         computerVisual.textContent = finalChoiceComputer;
 
-        if(hasil == 'MENANG!') { 
-            scorePlayer = scorePlayer += 1; 
-        };
-        if(hasil == 'KALAH!') { 
-            scoreComputer = scoreComputer += 1;
-        };
+        let scorePlayer = 0;
+        let scoreComputer = 0;
 
+        if(hasil == 'MENANG!') { 
+            scorePlayer += 1 ; 
+        }
+        else if(hasil == 'KALAH!') { 
+            scoreComputer += 1 ;
+        }else {
+            return 0;
+        }
+
+        pScore.innerHTML = scorePlayer;
+        cScore.innerHTML = scoreComputer;
         console.log(` score player : ${scorePlayer}`);
         console.log(` score computer : ${scoreComputer}`);
-
-        // const scoreVisual = document.querySelector('.score-area');
-        // scoreVisual.innerHTML = score;
         
         const info = document.querySelector('.info-area');
         info.innerHTML = hasil;
